@@ -54,7 +54,11 @@ let imgNames = [
 ];
 
 imgDir = "images/";
-imgNames = ["razer-lo-fi-wallpaper_3840x2160.png"];
+imgNames = [
+  "razer-lo-fi-wallpaper_3840x2160.png",
+  "night-sky-4k.jpg",
+  "VAPORWAVE-CHILL-LO-FI-VIBE-L_692023.png",
+];
 
 const chosenImage = imgNames[Math.floor(Math.random() * imgNames.length)];
 const bodyStyle = document.body.style;
