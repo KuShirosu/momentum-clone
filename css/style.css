@@ -1,14 +1,128 @@
+@import "todo.css";
+@import "greeting.css";
+@import "clock.css";
+@import "quote.css";
+@import "weather.css";
+@import "dday.css";
+@import url("https://fonts.googleapis.com/css?family=Sunflower:500,700");
+
+/* 모든 요소에 box-sizing: border-box 적용 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.hidden {
+  display: none !important;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 body {
+  font-family: Sunflower, sans-serif;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-size: cover; /* 이미지가 창 크기에 맞게 꽉 차도록 설정 */
   background-position: center; /* 이미지의 중앙을 창의 중앙에 맞추도록 설정 */
   background-repeat: no-repeat; /* 이미지가 반복되지 않도록 설정 */
   background-attachment: fixed; /* 배경 이미지가 고정되도록 설정 (옵션) */
 }
 
-.hidden {
-  display: none;
+#panel {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.panel__container {
+  width: 20%; /* 컨테이너 3개의 너비 조정 */
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.container--sub {
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+}
+.panel__container:first-child {
+  width: 30%;
+}
+.invisible-button {
+  background-color: transparent; /* 배경 투명 */
+  border: none; /* 테두리 없음 */
+  padding: 0; /* 패딩 없음 */
+  cursor: pointer; /* 커서 스타일 */
+  position: relative; /* 상대 위치 */
 }
 
-#container {
+.box--input-text {
   display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+.input-text {
+  font-size: 15px;
+  color: #222222;
+  width: 90%;
+  border: none;
+  border-bottom: solid #aaaaaa 1px;
+  padding-bottom: 10px;
+  text-align: center;
+  position: relative;
+  background: none;
+  z-index: 5;
+}
+.input-text::placeholder {
+  color: #aaaaaa;
+}
+.input-text:focus {
+  outline: none;
+}
+.input-span {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* right로만 바꿔주면 오 - 왼 */
+  background-color: #666;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+.input-label {
+  position: absolute;
+  color: #aaa;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  bottom: 8px;
+  transition: all 0.2s;
+}
+.input-text:focus ~ .input-label,
+.input-text:valid ~ .input-label {
+  font-size: 16px;
+  bottom: 40px;
+  color: #666;
+  font-weight: bold;
+}
+
+.input-text:focus ~ .input-span,
+.input-text:valid ~ .input-span {
+  width: 90%;
 }

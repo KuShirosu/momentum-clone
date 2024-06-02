@@ -1,0 +1,14 @@
+#container__todo {
+  background-color: aqua;
+  height: 50%;
+}
+#todo-list {
+  height: 90%;
+  background-color: yellow;
+  padding: 0;
+  margin: 20px;
+}
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+}

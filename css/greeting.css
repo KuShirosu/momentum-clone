@@ -1,0 +1,14 @@
+#container__greeting {
+  background-color: aquamarine;
+  height: 100px;
+  padding: 20px;
+}
+#login-form,
+#box-greeting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+  border-radius: 20px;
+  padding: 20px;
+}

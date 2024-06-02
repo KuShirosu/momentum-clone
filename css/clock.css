@@ -1,0 +1,20 @@
+/* @font-face kit by Fonts2u (https://fonts2u.com) */
+@font-face {
+  font-family: "Digital-7 Mono";
+  src: url("../fonts/digital-7__mono_.eot?") format("eot"),
+    url("../fonts/digital-7__mono_.woff") format("woff"),
+    url("../fonts/digital-7__mono_.ttf") format("truetype"),
+    url("../fonts/digital-7__mono_.svg#Digital-7Mono") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#container__clock {
+  background-color: blue;
+  text-align: center;
+}
+#clock {
+  font-family: "Digital-7 Mono", sans-serif;
+  font-weight: bold;
+  font-size: xx-large;
+}

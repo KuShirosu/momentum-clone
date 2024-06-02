@@ -1,0 +1,15 @@
+#container__quote {
+  background-color: cadetblue;
+}
+#quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#quote span:first-child {
+  margin-bottom: 10px;
+}
+#quote span:last-child::before,
+#quote span:last-child::after {
+  content: "-";
+}

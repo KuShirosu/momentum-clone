@@ -22,6 +22,7 @@ function paintToDo(newTodoObj) {
   li.id = newTodoObj.id;
   const span = document.createElement("span");
   const btn = document.createElement("button");
+  btn.classList.add("invisible-button");
   span.innerText = newTodoObj.text;
   btn.innerText = "❌";
   btn.addEventListener("click", deleteToDo);

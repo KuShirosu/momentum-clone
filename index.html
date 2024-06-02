@@ -7,22 +7,32 @@
     <title>Momentum</title>
   </head>
   <body>
-    <div id="container">
-      <div>
-        <div id="container__dday"></div>
-        <div id="container__todo">
+    <div id="panel">
+      <div class="panel__container">
+        <div id="container__dday" class="container--sub">
+          <form id="dday-form">
+            <div class="box--input-text">
+              <input type="text" required class="input-text" />
+              <label class="input-label">추가할 D-day 이름</label>
+              <span class="input-span"></span>
+            </div>
+            <input type="date" required />
+          </form>
+          <ul id="dday-list"></ul>
+        </div>
+        <div id="container__todo" class="container--sub">
           <form id="todo-form">
-            <input
-              type="text"
-              placeholder="Write a To Do and Prass Enter"
-              required
-            />
+            <div class="box--input-text">
+              <input type="text" required class="input-text" />
+              <label class="input-label">할 일</label>
+              <span class="input-span"></span>
+            </div>
           </form>
           <ul id="todo-list"></ul>
         </div>
       </div>
-      <div>
-        <div id="container__greeting">
+      <div class="panel__container">
+        <div id="container__greeting" class="container--sub">
           <form id="login-form" class="hidden">
             <input
               required
@@ -32,21 +42,23 @@
             />
             <input type="submit" value="login" />
           </form>
-          <h1 id="greeting" class="hidden"></h1>
+          <div id="box-greeting" class="hidden">
+            <h1 id="greeting"></h1>
+          </div>
         </div>
-        <div id="container__search"></div>
+        <div id="container__search" class="container--sub"></div>
       </div>
-      <div>
-        <div id="container__clock">
+      <div class="panel__container">
+        <div id="container__clock" class="container--sub">
           <h2 id="clock">00:00:00</h2>
         </div>
-        <div id="container__weather">
+        <div id="container__weather" class="container--sub">
           <div id="weather">
             <span></span>
             <span></span>
           </div>
         </div>
-        <div id="container__quote">
+        <div id="container__quote" class="container--sub">
           <div id="quote">
             <span></span>
             <span></span>
@@ -57,8 +69,9 @@
     <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
+    <!-- <script src="js/background.js"></script> -->
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/dday.js"></script>
   </body>
 </html>

@@ -45,7 +45,7 @@ const quotes = [
   },
 ];
 
-const quotes_programming = [
+const quotesProgramming = [
   {
     quote: "훌륭한 코드는 훌륭한 문서보다 낫다.",
     author: "Steve McConnell",
@@ -104,10 +104,12 @@ const quotes_programming = [
   },
 ];
 
+const quotesTotal = [...quotes, ...quotesProgramming]; //스프레드 연산자: 객체나 배열안의 요소를 전부 펼침
+
 const quote = document.querySelector("#quote span:first-child");
 const author = document.querySelector("#quote span:last-child");
 
-todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+const todaysQuote = quotesTotal[Math.floor(Math.random() * quotesTotal.length)];
 
 quote.innerText = todaysQuote.quote;
 author.innerText = todaysQuote.author;
