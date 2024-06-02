@@ -13,7 +13,7 @@
           <form id="dday-form">
             <div class="box--input-text">
               <input type="text" required class="input-text" />
-              <label class="input-label">추가할 D-day 이름</label>
+              <label class="input-label">D-Day</label>
               <span class="input-span"></span>
             </div>
             <input type="date" required />
@@ -38,15 +38,21 @@
               required
               maxlength="15"
               type="text"
-              placeholder="What is your name?"
+              placeholder="이름을 입력하세요"
             />
-            <input type="submit" value="login" />
+            <input type="submit" value="로그인" />
           </form>
           <div id="box-greeting" class="hidden">
-            <h1 id="greeting"></h1>
+            <h1 id="greeting-text1" class="large-text"></h1>
+            <span id="greeting-text2" class="large-text"></span>
           </div>
         </div>
-        <div id="container__search" class="container--sub"></div>
+        <div id="container__search" class="container--sub">
+          <form id="search-form" class="fasfa">
+            <i class="fas fa-search"></i>
+            <input class="search-input" placeholder="Google 검색" type="text" />
+          </form>
+        </div>
       </div>
       <div class="panel__container">
         <div id="container__clock" class="container--sub">
@@ -67,11 +73,17 @@
       </div>
     </div>
     <script src="js/greeting.js"></script>
+    <script src="js/background.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <!-- <script src="js/background.js"></script> -->
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/dday.js"></script>
+    <script src="js/search.js"></script>
+    <script
+      src="https://kit.fontawesome.com/004671453c.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

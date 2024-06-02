@@ -1,0 +1,25 @@
+#container__search {
+  display: flex;
+  justify-content: center;
+}
+.search-input {
+  width: 90%;
+  border-color: #bbb;
+  border-radius: 16px;
+  border-width: 1px;
+  padding: 6px 10px;
+  margin: 6px;
+}
+.fasfa {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.fa-search {
+  position: absolute;
+  right: 8%;
+  top: 30%;
+  color: gray;
+}

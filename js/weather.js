@@ -10,11 +10,23 @@ function onGeoOk(position) {
       const weather = document.querySelector("#weather span:first-child");
       const city = document.querySelector("#weather span:last-child");
       city.innerText = data.name;
-      weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+      const weatherText = data.weather[0].main;
+      let weatherIcon;
+      if (weatherText === "Clear") weatherIcon = "☀️ 맑음";
+      else if (weatherText === "Clouds") weatherIcon = "☁️ 흐림";
+      else if (weatherText === "Rain") weatherIcon = "🌧️ 비";
+      else if (weatherText === "Snow") weatherIcon = "🌨️ 눈";
+
+      weather.innerText = `${weatherIcon} / ${data.main.temp}°C`;
     });
 }
 function onGeoError() {
   alert("Can't find you.");
 }
+function updateWeather() {
+  navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+}
 
-navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+updateWeather();
+
+// setInterval(updateWeather, 1000);

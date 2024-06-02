@@ -1,5 +1,4 @@
 #container__quote {
-  background-color: cadetblue;
 }
 #quote {
   display: flex;
@@ -8,6 +7,10 @@
 }
 #quote span:first-child {
   margin-bottom: 10px;
+  font-size: x-large;
+}
+#quote span:last-child {
+  font-size: larger;
 }
 #quote span:last-child::before,
 #quote span:last-child::after {

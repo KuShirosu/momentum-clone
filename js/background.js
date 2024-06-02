@@ -1,5 +1,5 @@
-const imgDir = "E:/Pictures/RAZER's Pictures/Wallpapers/4K/";
-const imgNames = [
+let imgDir = "E:/Pictures/RAZER's Pictures/Wallpapers/4K/";
+let imgNames = [
   "Year_of_Gaming_Mouse_3840x2160.png",
   "3840x2160_Byte.jpg",
   "3840x2160_Quartz.jpg",
@@ -52,6 +52,10 @@ const imgNames = [
   "Wave-3840x2160.png",
   "WEAVE-3840x2160.png",
 ];
+
+imgDir = "images/";
+imgNames = ["razer-lo-fi-wallpaper_3840x2160.png"];
+
 const chosenImage = imgNames[Math.floor(Math.random() * imgNames.length)];
 const bodyStyle = document.body.style;
 bodyStyle.backgroundImage = `url("${imgDir}${chosenImage}")`;
